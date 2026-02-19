@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mon site PHP</title>
+        <!--<link rel="stylesheet" href="style.css">-->
+    </head>
+    <body>
+        
+        <?php
+        if ($route === null || $route === 'home') {
+            require 'home.phtml';
+        } elseif ($route === 'inscription') {
+            require 'register.phtml';
+        } elseif ($route === 'connexion') {
+            require 'login.phtml';
+        } else {
+            echo "<h2>Page non trouvée</h2>";
+        }
+        ?>
+        
+    </body>
+</html>
