@@ -8,7 +8,7 @@
         $email = trim($_POST['email']);
         $password = $_POST['password'];
     
-        $query = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $query = $db->prepare("SELECT * FROM users WHERE email = :email");
         $query->execute([
             'email' => $email
         ]);
